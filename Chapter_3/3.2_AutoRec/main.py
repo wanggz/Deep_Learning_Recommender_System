@@ -5,6 +5,7 @@ import tensorflow as tf
 import math
 import time
 
+print("begin!")
 args = Argument()
 
 tf.set_random_seed(args.random_seed)
@@ -32,3 +33,5 @@ for _ in range(args.repeat_number):
         result_path = ".result/" + time.strftime("%Y-%m-%d_%H_%M_%S", time.localtime())
 
         autoRec.make_recode(result_path)
+
+    print("finish!")
